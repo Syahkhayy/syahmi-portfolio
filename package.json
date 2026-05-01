@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-syahmi",
+  "version": "1.0.0",
+  "description": "Syahmi Portfolio Page",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

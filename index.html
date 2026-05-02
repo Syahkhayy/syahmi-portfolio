@@ -14,6 +14,7 @@
   <!-- Tailwind config — customize colors, fonts, etc. here -->
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -49,6 +50,40 @@
 </head>
 
 <body>
+  <!-- ============================================ -->
+  <!--  NAVBAR — Feature 3                          -->
+  <!-- ============================================ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Syahmi &copy;</a>
+
+      <div class="flex items-center gap-8">
+        <!-- Desktop Links -->
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <!-- Moon Icon -->
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <!-- Sun Icon -->
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+              fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
   <!-- ============================================ -->
   <!--  HERO SECTION — Step 2 of the build plan     -->
   <!-- ============================================ -->
@@ -99,15 +134,17 @@
 
     <div class="about-content">
       <p>
-        Hi! I'm <span class="text-white font-semibold">Syahmi</span>, a software engineer based in Malaysia who
+        Hi! I'm <span class="font-semibold text-brand-600">Syahmi</span>, a software engineer based in Malaysia who
         enjoys building things that live on the internet. My journey in tech is fueled by curiosity and a daily cup of
         coffee (or two). I love turning complex problems into simple, beautiful, and intuitive designs that make
         sense.
       </p>
       <p>
         I specialize in developing software with clean, efficient code and user-friendly interfaces.
-        With <span class="text-white font-semibold">2 Years of Experience</span>, my focus is always on high performance
-        and exceptional user experiences. I received <span class="text-white font-semibold">excellent</span> performance
+        With <span class="font-semibold text-brand-600">2 Years of Experience</span>, my focus is always on high
+        performance
+        and exceptional user experiences. I received <span class="font-semibold text-brand-600">excellent</span>
+        performance
         reviews from all my project leads, proving my reliability in delivering quality work consistently.
       </p>
       <p>
@@ -135,7 +172,7 @@
 
         <!-- Project 1: Portfolio Page -->
         <div class="project-card active">
-          <span class="status-badge status-completed">Completed</span>
+          <span class="status-badge status-live">LIVE</span>
           <div class="project-img-box">
             <img src="assets/portfolio-page2.png" alt="Portfolio Page" class="project-img">
           </div>
@@ -151,6 +188,23 @@
               <span class="tech-tag">HTML</span>
               <span class="tech-tag">CSS</span>
               <span class="tech-tag">JS</span>
+            </div>
+
+            <!-- Expandable Details Section -->
+            <div class="project-details">
+              <div class="details-container">
+                <div>
+                  <span class="details-label">Current Release</span>
+                  <p class="details-text">v0.2.0 - Added dark mode and interactive components.</p>
+                </div>
+                <div>
+                  <span class="details-label">Latest Update</span>
+                  <p class="details-text">May 2, 2026</p>
+                </div>
+                <a href="https://syahmi-portfolio-five.vercel.app/" target="_blank" class="btn-primary details-btn">
+                  Visit Site
+                </a>
+              </div>
             </div>
           </div>
         </div>

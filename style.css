@@ -42,7 +42,10 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 1.5rem;
-  background: radial-gradient(circle at center, #1a1a1a 0%, #0f0f0f 100%);
+  background: radial-gradient(circle at center, #111111 0%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  /* Keeps the moving orb inside the section */
 }
 
 .hero-content-wrapper {
@@ -359,6 +362,84 @@ body {
 }
 
 /* 10. Utilities & Animations */
+
+/* Geometric Hero Shapes */
+.hero-shape {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border: 2px solid rgba(79, 70, 229, 0.2);
+  opacity: 0.5;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  top: 15%;
+  animation: driftLTR 35s linear infinite;
+}
+
+.shape-2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  border-radius: 50%;
+  animation: driftRTL 45s linear infinite;
+}
+
+.shape-3 {
+  width: 70px;
+  height: 70px;
+  top: 40%;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), transparent);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%, 50% 10%, 10% 90%, 90% 90%, 50% 10%, 100% 100%);
+  border: none;
+  animation: driftLTR 25s linear infinite;
+}
+
+.shape-4 {
+  width: 100px;
+  height: 100px;
+  top: 75%;
+  animation: driftRTL 50s linear infinite;
+}
+
+.hero-polygon {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), transparent);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  z-index: 0;
+  pointer-events: none;
+  animation: driftLTR 40s linear infinite;
+  top: 25%;
+}
+
+@keyframes driftLTR {
+  from {
+    left: -10%;
+    transform: rotate(0deg);
+  }
+
+  to {
+    left: 110%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes driftRTL {
+  from {
+    right: -10%;
+    transform: rotate(0deg);
+  }
+
+  to {
+    right: 110%;
+    transform: rotate(-360deg);
+  }
+}
+
 .gradient-divider {
   height: 1px;
   flex: 1;

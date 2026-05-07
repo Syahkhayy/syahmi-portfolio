@@ -19,6 +19,7 @@
   --text-zinc: #a1a1aa;
   --text-gray: #888888;
   --text-footer: #525252;
+  --text-white: #ffffff;
 
   /* Brand/Accent */
   --brand-500: #6366f1;
@@ -44,11 +45,11 @@
 
 /* Light Theme Variables */
 html:not(.dark) {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-black: #ffffff;
-  --bg-card: #ffffff;
-  --bg-hero: radial-gradient(circle at center, #f3f4f6 0%, #ffffff 100%);
+  --bg-primary: #f0ebe0;
+  --bg-secondary: #f9fafba8;
+  --bg-black: #ffffffc0;
+  --bg-card: #ffffffc0;
+  --bg-hero: radial-gradient(circle at center, #f0ebe0 0%, #ffffff 100%);
   --bg-navbar: rgba(255, 255, 255, 0.8);
 
   --text-primary: #111827;
@@ -226,7 +227,8 @@ body {
   padding: 1rem 2.5rem;
   font-weight: 600;
   border-radius: 9999px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Faster, snappier transition */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Faster, snappier transition */
   display: inline-block;
   font-size: 0.95rem;
 }
@@ -235,6 +237,10 @@ body {
   background-color: var(--brand-600);
   color: var(--text-primary);
   box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:not(.dark) {
+  color: var(--text-white);
 }
 
 .btn-primary:hover {
@@ -321,7 +327,8 @@ body {
 
 .project-card.active:hover {
   transform: translateY(-0.75rem);
-  border-color: var(--brand-500); /* Highlight border with brand color */
+  border-color: var(--brand-500);
+  /* Highlight border with brand color */
   box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.1);
 }
 

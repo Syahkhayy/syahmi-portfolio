@@ -345,7 +345,7 @@ body {
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card:hover .project-img {
+.project-card.active:hover .project-img {
   transform: scale(1.08);
 }
 
@@ -360,6 +360,10 @@ body {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border-top: 1px solid transparent;
   margin-top: 0;
+}
+
+.project-card.expanded {
+  height: fit-content;
 }
 
 .project-card.expanded .project-details {
@@ -473,8 +477,8 @@ body {
 }
 
 .status-planned {
-  background-color: rgba(163, 163, 163, 0.1);
-  color: #a3a3a3;
+  background-color: rgba(163, 163, 163, 0.3);
+  color: var(--text-primary);
   border: 1px solid rgba(163, 163, 163, 0.2);
 }
 
